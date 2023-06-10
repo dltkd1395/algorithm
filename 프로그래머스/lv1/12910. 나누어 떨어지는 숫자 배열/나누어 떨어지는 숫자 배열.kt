@@ -4,6 +4,6 @@ class Solution {
         return arr.sorted()
             .filter { it % divisor == 0 }
             .toIntArray()
-            .run { if (this.isEmpty()) intArrayOf(-1) else this }
+            .let { if (it.isEmpty()) intArrayOf(-1) else it }
     }
 }
