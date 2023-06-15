@@ -1,15 +1,8 @@
 class Solution {
     fun solution(citations: IntArray): Int {
-        var answer = 0
-        (1..citations.size).forEach { c ->
-            val upCount = citations.filter { c <= it }.size
-            val downCount = citations.size - upCount
-            
-            if (upCount >= c && downCount <= c) {
-                answer = c
-            }
-            
-        }
-        return answer
+     
+        return citations.sortedDescending()
+            .mapIndexed { i, v -> minOf(i+1,v)}
+            .maxOrNull() as Int
     }
 }
