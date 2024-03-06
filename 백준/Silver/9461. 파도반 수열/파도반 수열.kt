@@ -3,7 +3,6 @@ fun main() = with(System.`in`.bufferedReader()) {
     val dp = MutableList(101) { 0L }
     dp[0] = 0L
     dp[1] = 1L
-    dp[1] = 1L
     dp[2] = 1L
     repeat(tc) {
         val n = readLine().toInt()
